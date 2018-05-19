@@ -25,9 +25,10 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
+    console.log($("input[name=devoured]").val());
     var newBurger = {
-      name: $("#ca").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      burger_name: $("#ca").val().trim(),
+      devoured: $("input[name=devoured]").val().trim()
     };
 
     // Send the POST request.

@@ -19,7 +19,8 @@ router.get("/", function(req, res) {
 
 // This will insert the data passed from the JS
 router.post("/api/burgers", function(req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured], function(result) {
+  console.log(req.body);
+  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
